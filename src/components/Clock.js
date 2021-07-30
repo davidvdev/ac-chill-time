@@ -42,10 +42,10 @@ const Clock =(props)=> {
     }
 
     const hourlyMusic = () => {
-        switch(timeArr[1]){
-            case 49:
+        switch(timeArr[2]){
+            case 0:
                 return 'https://vgmsite.com/soundtracks/animal-crossing-gc-rip/ylidljqw/57%2012AM.mp3'
-            case 50:
+            case 30:
                 return 'https://vgmsite.com/soundtracks/animal-crossing-gc-rip/lnudvooq/63%206AM.mp3'
         }
     }
