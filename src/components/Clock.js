@@ -73,7 +73,7 @@ const Clock =(props)=> {
     useEffect(() => {currentTime()},[])
 
     return (<>
-    <audio src={hourlyMusic()} autoPlay controls/>
+    <audio src={hourlyMusic()} loop autoPlay controls/>
         <h1>The time is: </h1>
             <h1>{time}</h1>
             <h1>{timeArr[0]}</h1>
