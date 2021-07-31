@@ -1,8 +1,51 @@
-.App {
-  text-align: center;
+html {
   background-image: url(https://images5.alphacoders.com/956/956578.jpg);
   background-position: center bottom;
   height: 100vh;
   width: 100vw;
 }
 
+.App {
+  text-align: center;
+}
+
+audio {
+  filter: sepia(100%);
+}
+
+/* Clock styling and code inspired by https://codepen.io/sthig/pen/QxevLW */
+.clock {
+  width: 15rem;
+  height: 15rem;
+  border:20px solid #916D37;
+  border-radius:50%;
+  margin:50px auto;
+  position: relative;
+  padding:2rem;
+  box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #E6B944,
+    inset 0 0 10px white,
+    0 0 10px rgba(0,0,0,0.2);
+  background-color: #ECDFC1;
+}
+
+.clock-face {
+  position: relative;
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width:50%;
+  height:12px;
+  background:#695826;
+  position: absolute;
+  top:50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
