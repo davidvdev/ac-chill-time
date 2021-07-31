@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-import logo from './logo.svg';
 import './App.css';
 
+import Music from './components/Music'
 import Clock from './components/Clock'
 
 function App() {
+
+  const [time, setTime] = useState(null)
+  const [timeArr, setTimeArr] = useState(null)
+
+  const getTime = (timeStr, timeArr) => {
+    setTime(timeStr)
+    setTimeArr(timeArr)
+  }
+  
   return (
     <div className="App">
-      <Clock />
+      <Clock getTime={getTime} currentTime={timeArr}/>
+      <Music currentTime={timeArr}/>
     </div>
   );
 }
