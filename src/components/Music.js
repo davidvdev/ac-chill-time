@@ -29,6 +29,7 @@ const Music = (props) => {
                 case 21: return `https://vgmsite.com/soundtracks/animal-crossing-gc-rip/xjzxouqy/78%209PM.mp3` //9PM
                 case 22: return `https://vgmsite.com/soundtracks/animal-crossing-gc-rip/zhcddudp/79%2010PM.mp3` //10PM
                 case 23: return `https://vgmsite.com/soundtracks/animal-crossing-gc-rip/nxlyyemi/80%2011PM.mp3` //11PM
+                default: loading();
             }
         }
             return <audio src={hourlyMusic()} loop autoPlay controls/>

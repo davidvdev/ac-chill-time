@@ -5,14 +5,13 @@ import './App.css';
 import Logo from './components/Logo';
 import Music from './components/Music'
 import Clock from './components/Clock'
+import GameSelector from './components/GameSelector';
 
 function App() {
 
-  // const [time, setTime] = useState(null)
   const [timeArr, setTimeArr] = useState(null)
 
   const getTime = (timeStr, timeArr) => {
-    // setTime(timeStr)
     setTimeArr(timeArr)
   }
   
@@ -21,6 +20,7 @@ function App() {
       <Logo />
       <Clock getTime={getTime} currentTime={timeArr}/>
       <Music currentTime={timeArr}/>
+      <GameSelector />
     </div>
   );
 }
