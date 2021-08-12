@@ -1,3 +1,10 @@
+:root {
+  --dark-brown: #695826;
+  --light-brown: #916D37;
+  --gold: #E6B944;
+  --off-white: #ECDFC1;
+}
+
 html {
   background-image: url(https://images5.alphacoders.com/956/956578.jpg);
   background-position: center bottom;
@@ -26,17 +33,17 @@ audio {
 .clock {
   height: 20vh;
   width: 20vh;
-  border:20px solid #916D37;
+  border:20px solid var(--light-brown);
   border-radius:50%;
   margin:50px auto;
   position: relative;
   padding:2rem;
   box-shadow:
     0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #E6B944,
+    inset 0 0 0 3px var(--gold),
     inset 0 0 10px white,
     0 0 10px rgba(0,0,0,0.2);
-  background-color: #ECDFC1;
+  background-color: var(--off-white);
 }
 
 .clock-face {
@@ -50,11 +57,42 @@ audio {
 .hand {
   width:50%;
   height:12px;
-  background:#695826;
+  background:var(--dark-brown);
   position: absolute;
   top:50%;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.selector ul {
+  margin: 2em 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.selector li {
+  padding: 1em;
+  color: var(--off-white);
+  background-color: var(--light-brown);
+}
+
+.selector li:hover {
+  color: var(--dark-brown);
+  background-color: var(--gold);
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    height: auto;
+  }
+
+  .selector ul {
+    width: 100vw;
+    flex-direction: column;
+  }
 }
