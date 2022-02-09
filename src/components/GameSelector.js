@@ -13,7 +13,7 @@ const GameSelector = (props) => {
                 <li onClick={handleClick}>Animal Crossing: City Folk</li>
                 <li onClick={handleClick}>Animal Crossing: Wild World</li>
                 <li onClick={handleClick}>Animal Crossing: New Leaf</li>
-                <li onClick={handleClick}>Animal Crossing: New Horizons</li>
+                <li class="disabled">Animal Crossing: New Horizons</li>
             </ul>
         </div>
     )

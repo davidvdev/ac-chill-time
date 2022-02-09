@@ -84,6 +84,17 @@ audio {
 .selector li:hover {
   color: var(--dark-brown);
   background-color: var(--gold);
+  cursor: pointer;
+}
+
+.selector li.disabled {
+  background-color: var(--dark-brown);
+  cursor: default;
+  color: var(--gold);
+}
+
+.selector li.disabled:hover {
+  color: var(--gold)
 }
 
 @media screen and (max-width: 480px) {
